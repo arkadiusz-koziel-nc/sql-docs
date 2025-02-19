@@ -33,6 +33,9 @@ The ability to restore copy-only full backups of databases from SQL Managed Inst
 > [!IMPORTANT]
 > The ability to restore copy-only full backups of databases from SQL Managed Instance to SQL Server 2022 will be available until the end of [mainstream support for SQL Server 2022](/lifecycle/products/sql-server-2022).
 
+> [!IMPORTANT]
+> Databases that are encrypted with service-managed TDE keys can't be restored to SQL Server. You can restore an encrypted database to SQL Server only if it was encrypted with a customer-managed key and the destination server has access to the same key that's used to encrypt the database. For more information, see [Set up SQL Server TDE with Azure Key Vault](/sql/relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault).
+
 ## Take a backup on SQL Managed Instance 
 
 First, create a credential to access the storage account from your instance, take a copy-only backup of your database, and then store it. 
